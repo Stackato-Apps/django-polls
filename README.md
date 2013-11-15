@@ -12,7 +12,7 @@ This example demonstrates on how you can deploy a Django application to Stackato
 Before you deploy this application locally, there are a couple of packages that you'll want to set up first:
 
  * [pip](http://www.pip-installer.org/en/latest/)
- * [uwsgi](http://projects.unbit.it/uwsgi/)
+ * *optional*: [uwsgi](http://projects.unbit.it/uwsgi/)
  * *optional*: [virtualenv](http://www.virtualenv.org/en/latest/)
  * *optional*: [foreman](http://ddollar.github.io/foreman/)
 
