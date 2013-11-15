@@ -1,8 +1,4 @@
-name: django-mysite
-framework:
-  type: python
-processes:
-  web: uwsgi --reaper --vacuum --master --processes 8 --single-interpreter --enable-threads --http-socket=0.0.0.0:$PORT --static-map /static=$HOME/static mysite/wsgi.py 
+name: django-polls
 services:
   ${name}-db: postgresql
 requirements:
