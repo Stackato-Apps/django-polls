@@ -1,0 +1,13 @@
+applications:
+- name: django-polls
+  services:
+    ${name}-db:
+      type: postgresql
+  stackato:
+    hooks:
+      post-staging:
+      - python manage.py syncdb --noinput
+      - python manage.py collectstatic --noinput
+    requirements:
+      ubuntu:
+      - libpq-dev
