@@ -1,5 +1,5 @@
-Django Hello World Example for Stackato
-=======================================
+Django Polls Example for HPE Helion Stackato
+============================================
 
 This example demonstrates on how you can deploy a Django application to Stackato on v3, which introduced a couple of changes to how applications are deployed.
 
@@ -39,7 +39,7 @@ Now that we have the dependencies installed, let's start our application:
 ```
 $ virtualenv ~/venv
 $ source ~/venv/bin/activate
-$ git clone https://github.com/Stackato-Apps/django-polls.git
+$ git clone <django-polls Github url>
 $ cd django-polls
 $ pip install -r requirements.txt
 $ python manage.py syncdb --noinput
@@ -50,17 +50,12 @@ $ python manage.py runserver
 
 You should now see your application running on port 8000. Head on over to http://localhost:8000/admin to see the administrator page.
 
-## On Stackato
+## On HPE Helion Stackato
 
 Deploying this application couldn't be any easier:
 
 ```
-$ # target and login to the Stackato cluster
-$ stackato target api.stackato-xxxx.local
-$ stackato login
-$ # if you haven't created a space yet, create one!
-$ stackato create-space dev && stackato switch-space dev 
-$ stackato push -n --as django-polls
+$ stackato push -n
 $ # create a superuser in postgresql so we can gain access to the admin console
 $ stackato run python manage.py createsuperuser
 ```
