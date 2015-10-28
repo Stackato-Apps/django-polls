@@ -1,5 +1,6 @@
 applications:
 - name: django-polls
+  memory: 256M
   services:
     ${name}-db:
       type: postgresql
